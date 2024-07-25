@@ -22,7 +22,8 @@
 
 <![endif]    -->
     </head>
-    <body>
+    <body style="min-width: 100%;-moz-box-sizing:border-box;-ms-text-size-adjust:100%;width:100%;">
+   
         {# Header Container #}
         {% set headercontent %}
             {% block headercontentcontainer %}
@@ -58,5 +59,6 @@
                 {{ footercontent }}
             {% endblock %}
         {% endembed %}
+  
     </body>
 </html>
