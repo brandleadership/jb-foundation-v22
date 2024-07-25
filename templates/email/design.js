@@ -6,7 +6,7 @@ module.exports = cx.design
   .withTitle("E-Mail Scaffold")
   .withAuthor("BSI Business Systems Integration AG")
   .withDate("20.05.2022")
-  // .withPreviewImage(require("./thumbnail.png"))
+  .withPreviewImage('static/preview.png')
   .withDefaultLocale(Locale.EN)
   .withLocales(Locale.EN, Locale.DE)
   .withContentElementGroups(

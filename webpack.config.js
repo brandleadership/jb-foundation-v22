@@ -12,13 +12,16 @@ const emailBuildConfig = new BuildConfig()
     .withName('email')
     .withVersion('2.0.0')
     .withDesignType(DesignType.EMAIL)
-    .withTargetVersion(Version.CX_1_3)
+    .withTargetVersion(Version.CX_22_0)
     .withRootPath(path.resolve(__dirname, 'templates', 'email'))
     .withPropertiesFilePath(path.resolve(__dirname, 'properties.js'))
     .withAdditionalFilesToCopy({
         from: path.resolve(__dirname, 'resources', 'img'),
         to: 'img',
-    });
+    }, {
+      from: path.resolve(__dirname, 'templates', 'email', 'preview.png'),
+      to: 'static/preview.png',
+  });
 
     module.exports = WebpackConfigBuilder.fromConfigs(
       emailBuildConfig
