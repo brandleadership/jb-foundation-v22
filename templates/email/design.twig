@@ -1,6 +1,21 @@
 {% extends './_layout.twig' %}
 
-{% block main %}
-  {% include './content-elements/content/title/template.twig' %}
-  {% include './content-elements/content/text/template.twig' %}
+{% block headercontentcontainer %}
+  {% include './content-elements/elements/webview/template.twig' %}
+  {% include './content-elements/sections/header/template.twig' %}
+{% endblock %}
+
+{% block bodycontentcontainer %}
+  {% include './content-elements/sections/title/template.twig' %}
+  {% include './content-elements/sections/article-section/template.twig' %}
+  {% include './content-elements/sections/article-section-white/template.twig' %}
+  {% include './content-elements/sections/double-article/template.twig' %}
+  {% include './content-elements/sections/text-quote-block/template.twig' %}
+  {% include './content-elements/sections/article-section/template.twig' %}
+  {% include 'content-elements/sections/socials/template.twig' %}
+{% endblock %}
+
+{% block footercontentcontainer %}
+  {% include './content-elements/sections/footer-links/template.twig' %}
+  {% include './content-elements/sections/copyright/template.twig' %}
 {% endblock %}

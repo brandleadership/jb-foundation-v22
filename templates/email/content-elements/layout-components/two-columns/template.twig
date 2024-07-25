@@ -1,0 +1,52 @@
+<div {{ _isBsiElement ? 'data-bsi-element="two-columns"' : '' }}>
+    <table border="0" cellpadding="0" cellspacing="0" width="530">
+        <tbody>
+            <tr>
+                <td>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border:0;">
+                        <tbody>
+                            <tr>
+                                <td style="padding-bottom: 10px;">
+                                    <table align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: {{ _contentWidth ? : '100%' }};">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" align="left" style="padding-top: 0px;">
+                                                    <table align="left" border="0" width="300" cellpadding="0" cellspacing="0" valign="top" style="width: {{ _columnWidth ? : '50%' }};">
+                                                        <tbody>
+                                                            <tr align="center">
+                                                                <td>
+                                                                    <div style="padding-top: 10px; border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;" data-bsi-dropzone="{{ _column1 ? : 'column1' }}">
+                                                                        {% block column1 %}
+
+                                                                        {% endblock %}
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table align="right" border="0" cellpadding="0" width="300" cellspacing="0" valign="top" style="width: {{ _columnWidth ? : '50%' }};">
+                                                        <tbody>
+                                                            <tr align="center">
+                                                                <td>
+                                                                    <div style="padding-top: 10px; border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;" data-bsi-dropzone="{{ _column2 ? : 'column2' }}">
+                                                                        {% block column2 %}
+
+                                                                        {% endblock %}
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

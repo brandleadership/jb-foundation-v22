@@ -1,0 +1,27 @@
+<div data-bsi-element="card-image"
+   class="card-white"
+   style="border-radius: {{ styles['card-border-radius'] }};">
+   {% include '../../templates/image-template.twig' with {
+   _imageWidth: '600'
+   } %}
+   <table border="0" cellpadding="0" cellspacing="0" width="{{ _isFullWidth ? '600' : '530' }}" align="center" style="background-color: {{ _backgroundColor }}">
+      <tbody>
+         <tr>
+            <td style="background-color: {{ _backgroundColor }}">
+               <table align="center" border="0" cellpadding="0" cellspacing="0" width="{{ styles['content-width'] }}" style="
+                  background-color: {{ _backgroundColor }}">
+                  <tbody>
+                     <tr>
+                        <td width="{{ styles['content-width'] }}" data-bsi-dropzone="card-dropzone" align="{{ _item_align }}" style="padding-bottom: 10px;                   
+                           background-color: {{ _backgroundColor }}">
+                           {% include '../../elements/spacer/template.twig'  %}
+                           {% include '../../elements/spacer/template.twig'  %}
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

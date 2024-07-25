@@ -1,0 +1,14 @@
+/* Divider Style Group Definitions */
+
+.divider-grey,
+.divider-blue {
+  min-height: auto !important;
+}
+
+.divider-grey td.divider-style {
+  border-bottom: 2px solid #b0aa7e;
+}
+
+.divider-blue td.divider-style {
+  border-bottom: 2px solid #7d67ba;
+}

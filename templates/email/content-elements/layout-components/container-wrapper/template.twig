@@ -1,0 +1,41 @@
+<div style="background-color: {{ _backgroundColor }};">
+    <table bgcolor="{{ _backgroundColor }}"
+      border="0"
+      align="center"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%">
+      <tbody>
+        <tr>
+          <td>
+            <table bgcolor="{{ _containerBackgroundColor }}"
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              width="600"
+              style="background-color: {{ _containerBackgroundColor }}; width: 600px;">
+              <tbody>
+                <tr>
+                  <td width="600" 
+                    data-bsi-dropzone="{{ _dropzoneName }}"
+                    data-bsi-hide-remove-button="{{ _hideRemoveButton }}"
+                    data-bsi-hide-copy-button="{{ _hideCopyButton }}"
+                    data-bsi-hide-move-button="{{ _hideMoveButton }}"
+                    data-bsi-dropzone-allowed-elements="header article-section double-article footer-links copyright text-quote-block image-header webview socials title article-section-white"
+                    {% if _max_number_of_elements %} 
+                      data-bsi-dropzone-max-number-of-elements="{{_max_number_of_elements}}"
+                    {% endif %}
+                    >
+                    {% block container %}
+
+                    {% endblock %}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

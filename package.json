@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production --progress",
     "watch": "webpack --config webpack.config.js --mode development --watch --progress",
-    "serve": "webpack serve --config webpack.config.js --mode development --progress"
+    "serve": "webpack serve --config webpack.config.js --mode development --progress",
+    "pretty": "prettier --write \"./**/*.{js,twig,css,scss}\""
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,8 @@
   ],
   "homepage": "https://github.com/bsi-software/bsi-cx-scaffold-design#readme",
   "devDependencies": {
-    "@bsi-cx/design-build": "github:bsi-software/bsi-cx-design-build#semver:^1.8.0"
+    "@bsi-cx/design-build": "github:bsi-software/bsi-cx-design-build#semver:^1.8.0",
+    "prettier": "3.3.3",
+    "prettier-plugin-twig-melody": "^0.4.6"
   }
 }

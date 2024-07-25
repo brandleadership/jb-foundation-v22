@@ -1,0 +1,112 @@
+<div {{ _isBsiElement ? 'data-bsi-element="three-columns"' : '' }}>
+  <table border="0" cellpadding="0" cellspacing="0" width="600">
+    <tbody>
+      <tr>
+        <td>
+          <table align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="600"
+            style="border:0;">
+            <tbody>
+              <tr>
+                <td style="padding-bottom: 10px;">
+                  <table align="center"
+                    role="presentation"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="560"
+                    style="width: {{ _contentWidth ? : '560px' }};">
+                    <tbody>
+                      <tr>
+                        <td bgcolor="{{ styles['background-content'] }}"
+                          valign="top"
+                          align="left"
+                          style="padding-top: 0px;">
+                          <table align="left"
+                            width="186"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            valign="top"
+                            style="width: {{ _columnWidth ? : '185px' }};">
+                            <tbody>
+                              <tr align="center">
+                                <td>
+                                  <div style="padding-top: 10px; border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;"
+                                    data-bsi-dropzone="{{
+                                    _column1
+                                      ?
+                                      : 'column1'
+                                    }}">
+                                    {% block column1 %}
+
+                                    {% endblock %}
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table align="left"
+                            width="186"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            valign="top"
+                            style="width: {{ _columnWidth ? : '185px' }};">
+                            <tbody>
+                              <tr align="center">
+                                <td>
+                                  <div style="padding-top: 10px; border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;"
+                                    data-bsi-dropzone="{{
+                                    _column2
+                                      ?
+                                      : 'column2'
+                                    }}">
+                                    {% block column2 %}
+
+                                    {% endblock %}
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table align="left"
+                            width="186"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            valign="top"
+                            style="width: {{ _columnWidth ? : '185px' }};">
+                            <tbody>
+                              <tr align="center">
+                                <td>
+                                  <div style="padding-top: 10px; border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;"
+                                    data-bsi-dropzone="{{
+                                    _column3
+                                      ?
+                                      : 'column3'
+                                    }}">
+                                    {% block column3 %}
+
+                                    {% endblock %}
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

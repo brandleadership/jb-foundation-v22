@@ -1,0 +1,50 @@
+<div data-bsi-element="card-two-columns"
+  class="card-white"
+  style="border-radius: {{ styles['card-border-radius'] }};">
+  {% embed '../../layout-components/two-columns-gap/template.twig'
+    with {
+      _isDropZone: false,
+      _column1: 'card-left',
+      _column2: 'card-right'
+    }
+  %}
+    {% block column1 %}
+      <table align="right"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        width="270"
+        style="border:0;">
+        <tbody>
+          <tr>
+            <td width="270">
+              <div data-bsi-dropzone="card-column-left">
+                {% include '../../elements/spacer/template.twig'  %}
+                {% include '../../elements/spacer/template.twig'  %}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {% endblock %}
+    {% block column2 %}
+      <table align="left"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        width="270"
+        style="border:0;">
+        <tbody>
+          <tr>
+            <td width="270">
+              <div data-bsi-dropzone="card-column-right">
+                {% include '../../elements/spacer/template.twig'  %}
+                {% include '../../elements/spacer/template.twig'  %}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {% endblock %}
+  {% endembed %}
+</div>

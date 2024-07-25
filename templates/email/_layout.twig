@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>{{ properties.title }}</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-    {{ bsi_cx_css_inline() }}
-  </style>
-</head>
-<body>
+    <head>
+        <title>{{ properties.title }}</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta name="google" content="notranslate" />
+        <link rel="stylesheet" href="{{ bsi_cx_css_href() }}" />
+        <!--  [if gte mso 9]>
 
-{# Be aware, that this is no valid email template. #}
+<xml>
 
-<main data-bsi-dropzone="a1683342-d4a7-4c26-924e-bce162c4399f">
-  {% block main %}{% endblock %}
-</main>
+<o:OfficeDocumentSettings>
 
-<footer>
-  Built for BSI CX {{ cx.version.TARGET.toString() }}
-</footer>
+<o:AllowPNG/>
 
-</body>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+
+</o:OfficeDocumentSettings>
+
+</xml>
+
+<![endif]  -->
+    </head>
+    <body>
+        {# Header Container #}
+        {% set headercontent %}
+            {% block headercontentcontainer %}
+
+            {% endblock %}
+        {% endset %}
+        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _backgroundColor: properties.styles.background_color, _containerBackgroundColor: properties.styles.container_bg_color, _dropzoneName: 'header_container', _hideRemoveButton: false, _hideCopyButton: true, _hideMoveButton: true } %}
+            {% block container %}
+                {{ headercontent }}
+            {% endblock %}
+        {% endembed %}
+
+        {# Body Container #}
+        {% set bodycontent %}
+            {% block bodycontentcontainer %}
+
+            {% endblock %}
+        {% endset %}
+        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _backgroundColor: properties.styles.background_color, _containerBackgroundColor: properties.styles.container_bg_color, _dropzoneName: 'container' } %}
+            {% block container %}
+                {{ bodycontent }}
+            {% endblock %}
+        {% endembed %}
+
+        {# Footer Container #}
+        {% set footercontent %}
+            {% block footercontentcontainer %}
+
+            {% endblock %}
+        {% endset %}
+        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _backgroundColor: properties.styles.background_color, _containerBackgroundColor: properties.styles.container_bg_color, _dropzoneName: 'footer_container', _hideRemoveButton: false, _hideCopyButton: true, _hideMoveButton: true } %}
+            {% block container %}
+                {{ footercontent }}
+            {% endblock %}
+        {% endembed %}
+    </body>
 </html>

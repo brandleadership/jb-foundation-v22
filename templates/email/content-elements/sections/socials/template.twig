@@ -1,0 +1,63 @@
+<div data-bsi-element="socials" style="background-color: #ffffff;" data-bsi-hide-edit-button="true">
+   <table width="600" style="border:0; width:600px;" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tbody>
+         <tr>
+            <td width="600" style="text-align: center; background-color: #ffffff; padding-top: 30px; padding-bottom:18px;">
+               <table 
+                  border="0"
+                  align="center"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="display:inline-block;">
+                  <tbody>
+                     <tr>
+                        <td align="center">
+                           <table border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="background-color: #ffffff;">
+                              <tbody>
+                                 <tr>
+                                    <td style="background-color: #ffffff;">
+                                       <table align="center" border="0" cellpadding="0" cellspacing="0" width="{{ styles['content-width'] }}" style="
+                                          background-color: #ffffff;">
+                                          <tbody>
+                                             <tr>
+                                                <td width="{{ styles['content-width'] }}" data-bsi-dropzone="socials-dropzone" align="center" style="padding-bottom: 10px;                   
+                                                   background-color: #ffffff;">
+                                                   {% block contentWrapper %}
+                                                   {% include '../../elements/social-media-item/template.twig' with {
+                                                   _socialIcon: bsi_cx_asset('../../../../../resources/img/socials/linkedin.png'),
+                                                   _socialLink: 'https://juliusbaer.com',
+                                                   _imgAltTxt: properties.socialshares.alt.linkedin
+                                                   } %}
+                                                   {% include '../../elements/social-media-item/template.twig' with {
+                                                   _socialIcon: bsi_cx_asset('../../../../../resources/img/socials/youtube.png'),
+                                                   _socialLink: 'https://juliusbaer.com',
+                                                   _imgAltTxt: properties.socialshares.alt.youtube
+                                                   } %}
+                                                   {% include '../../elements/social-media-item/template.twig' with {
+                                                   _socialIcon: bsi_cx_asset('../../../../../resources/img/socials/instagram.png'),
+                                                   _socialLink: 'https://juliusbaer.com',
+                                                   _imgAltTxt: properties.socialshares.alt.insta
+                                                   } %}
+                                                   {% include '../../elements/social-media-item/template.twig' with {
+                                                   _socialIcon: bsi_cx_asset('../../../../../resources/img/socials/facebook.png'),
+                                                   _socialLink: 'https://juliusbaer.com',
+                                                   _imgAltTxt: properties.socialshares.alt.fb
+                                                   } %}
+                                                   {% endblock %}
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

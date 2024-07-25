@@ -1,0 +1,16 @@
+<div data-bsi-element="logo-block">
+   {% embed '../../layout-components/content-wrapper/template.twig'
+   with {
+   _dropzoneName: "logo-block-dropzone",
+   _item_align: "center",
+  
+   }
+   %}
+   {% block contentWrapper %}
+      {% include '../../elements/image/template.twig' with {
+      _imageSrc: bsi_cx_asset('../../../../../resources/img/logo.png')
+      } %}
+   {% endblock %}
+   {% endembed %}
+
+</div>

@@ -1,9 +1,12 @@
-body {
-  margin: 0;
-  padding: 0.5rem;
-}
+@import './general.scss';
 
-main {
-  display: flex;
-  flex-direction: column;
-}
+@import '../content-elements/elements/text/styles.scss';
+@import '../content-elements/elements/text-link/styles.scss';
+@import '../content-elements/elements/h1-title/styles.scss';
+@import '../content-elements/elements/h2-subtitle/styles.scss';
+@import '../content-elements/elements/h3-subtitle/styles.scss';
+@import '../content-elements/elements/h4-subtitle/styles.scss';
+@import '../content-elements/elements/divider/styles.scss';
+@import '../content-elements/elements/webview/styles.scss';
+
+@import '../content-elements/sections/article-section/styles.scss';

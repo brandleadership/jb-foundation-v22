@@ -1,0 +1,27 @@
+<div 
+  class="link-blue">
+  <table border="0"
+    cellpadding="0"
+    cellspacing="0"
+    align="center"
+    {# applying the additional width via CSS too to the outermost concerned table element should be enough, application to inner td evt not needed #}
+    width="{{ _imageWidth }}" style="width: {{ _imageWidth }}px;">
+    <tbody>
+      <tr>
+        <td width="{{ _imageWidth }}"
+          style="{{
+          _style
+            ? _style
+            : 'margin-top: 0px; margin-bottom: 0px; margin-left: 0px;margin-right: 0px; padding-top: 20px;'
+          }}"
+          data-bsi-element-part="link">
+          <a href="[TEXTLINK]"
+            class="text-link"
+            style="color: #7D67BA; padding-bottom: 5px; text-decoration: none;">
+            {{ _text ? _text : 'Mehr erfahren' }}
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

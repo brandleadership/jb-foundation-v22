@@ -1,0 +1,70 @@
+<div {{ _isBsiElement ? 'data-bsi-element="two-columns-gap"' : '' }}>
+<table border="0" cellpadding="0" cellspacing="0" width="530" style=" width: 530px;">
+    <tbody>
+      <tr>
+        <td>
+          <table align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="{{ styles['content-width'] }}"
+            style="border:0;">
+            <tbody>
+              <tr>
+                <td width="{{ styles['content-width'] }}"
+                  style="padding-bottom: 10px;"
+                  >
+                     <table align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="530"
+                      margin="0"
+                      style="border:0; width: 530px;">
+                      <tbody>
+                        <tr>
+                          <td style="
+                          {% if _addPadding %} 
+                          'padding-bottom: 30px; padding-top: 20px;'
+                          {% endif %}
+                          vertical-align: top; 
+                          " width="{{ styles['column-width'] }}">
+                            <div align="left" valign="top" style="width: {{ styles['column-width'] }}px;border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;"
+                              {% if _isDropZone %}
+                                data-bsi-dropzone="{{ _column1 ? : 'column1' }}"
+                              {% endif %}>
+                              {% block column1 %}
+                              {% endblock %}
+                            </div>
+                          </td>
+                          <td  width="35">
+                            <div align="left" valign="top" style="vertical-align: top; width: 20px; padding-top: 20px; border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;"></div>
+                          </td>
+                          <td style="
+                            {% if _addPadding %} 
+                              'padding-bottom: 30px; padding-top: 20px;'
+                              {% endif %}
+                              vertical-align: top; 
+                              "
+                             width="{{ styles['column-width'] }}">
+                            <div align="left" valign="top" style="width: {{ styles['column-width'] }}px; border-width: 0px !important;margin-top: 0px!important;margin-bottom: 0px !important;"
+                              {% if _isDropZone %}
+                                data-bsi-dropzone="{{ _column2 ? : 'column2' }}"
+                              {% endif %}>
+                              {% block column2 %}
+
+                              {% endblock %}
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
