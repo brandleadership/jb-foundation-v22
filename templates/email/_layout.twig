@@ -6,7 +6,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta name="google" content="notranslate" />
         <link rel="stylesheet" href="{{ bsi_cx_css_href() }}" />
-        <!--  [if gte mso 9]>
+        <!--    [if gte mso 9]>
 
 <xml>
 
@@ -20,7 +20,7 @@
 
 </xml>
 
-<![endif]  -->
+<![endif]    -->
     </head>
     <body>
         {# Header Container #}
@@ -29,7 +29,7 @@
 
             {% endblock %}
         {% endset %}
-        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _backgroundColor: properties.styles.background_color, _containerBackgroundColor: properties.styles.container_bg_color, _dropzoneName: 'header_container', _hideRemoveButton: false, _hideCopyButton: true, _hideMoveButton: true } %}
+        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _dropzoneName: 'header_container', _hideRemoveButton: false, _hideCopyButton: true, _hideMoveButton: true } %}
             {% block container %}
                 {{ headercontent }}
             {% endblock %}
@@ -41,7 +41,7 @@
 
             {% endblock %}
         {% endset %}
-        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _backgroundColor: properties.styles.background_color, _containerBackgroundColor: properties.styles.container_bg_color, _dropzoneName: 'container' } %}
+        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _dropzoneName: 'container' } %}
             {% block container %}
                 {{ bodycontent }}
             {% endblock %}
@@ -53,7 +53,7 @@
 
             {% endblock %}
         {% endset %}
-        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _backgroundColor: properties.styles.background_color, _containerBackgroundColor: properties.styles.container_bg_color, _dropzoneName: 'footer_container', _hideRemoveButton: false, _hideCopyButton: true, _hideMoveButton: true } %}
+        {% embed 'content-elements/layout-components/container-wrapper/template.twig' with { _dropzoneName: 'footer_container', _hideRemoveButton: false, _hideCopyButton: true, _hideMoveButton: true } %}
             {% block container %}
                 {{ footercontent }}
             {% endblock %}
